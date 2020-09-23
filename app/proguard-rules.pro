@@ -30,6 +30,46 @@
 -dontskipnonpubliclibraryclassmembers
 #-keepattributesSignature
 
+-keep public class * extends android.app.Activity{
+	public <fields>;
+	public <methods>;
+}
+-keep public class * extends android.app.Application
+{
+	public <fields>;
+	public <methods>;
+}
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclasseswithmembers class * {
+	public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+	public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepattributes *Annotation*
+
+-keepclasseswithmembernames class *{
+	native <methods>;
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keep class android.provider.MediaStore.**{*;}
+
 # Glide
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep class * extends com.bumptech.glide.module.AppGlideModule {

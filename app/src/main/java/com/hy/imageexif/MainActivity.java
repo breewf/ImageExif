@@ -86,18 +86,19 @@ public class MainActivity extends AppCompatActivity {
             clearImageDeviceInfo();
         });
 
-        mInfoTv.setOnClickListener(view -> hideBtn());
-
-        mInfoTv.setOnLongClickListener(view -> {
-            String info = mInfoTv.getText().toString();
-            if (TextUtils.isEmpty(info)) {
-                return true;
+        mInfoTv.setOnClickListener(view -> {
+            if (mIsBtnShow) {
+                hideBtn();
+            } else {
+                String info = mInfoTv.getText().toString();
+                if (TextUtils.isEmpty(info)) {
+                    return;
+                }
+                if (!info.startsWith(getString(R.string.str_image_info_flag))) {
+                    return;
+                }
+                showBtn();
             }
-            if (!info.startsWith(getString(R.string.str_image_info_flag))) {
-                return true;
-            }
-            showBtn();
-            return true;
         });
     }
 
@@ -274,8 +275,7 @@ public class MainActivity extends AppCompatActivity {
         String textInfo;
 
         textInfo = getString(R.string.str_image_info_flag) + "\n"
-                + "①长按文本显示操作按钮 ^_^" + "\n"
-                + "②点击文本隐藏操作按钮 (*^__^*)" + "\n"
+                + "点击文本[显示/隐藏]操作按钮 ^_^" + "\n"
                 + "------华丽的分割线------" + "\n"
 
                 + "model：" + model + "\n"
