@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ImageExif</string>
+
+    <string name="btn_select_pic">选择一张图片</string>
+    <string name="str_storage_permission">需要存储权限才可以使用哟~</string>
+    <string name="read_image_info_error">读取图片信息出错喽</string>
+    <string name="btn_clear_gps">擦\n除\nG\nP\nS\n信\n息</string>
+    <string name="str_clear_gps_error">清除GPS信息出错</string>
+    <string name="str_clear_gps_success">清除GPS信息成功</string>
+    <string name="btn_clear_time">擦\n除\n时\n间\n信\n息</string>
+    <string name="str_clear_time_error">清除时间信息出错</string>
+    <string name="str_clear_time_success">清除时间信息成功</string>
+    <string name="btn_clear_device">擦\n除\n设\n备\n信\n息</string>
+    <string name="str_clear_device_error">清除设备信息出错</string>
+    <string name="str_clear_device_success">清除设备信息成功</string>
+    <string name="str_image_info_flag" tools:ignore="TypographyDashes">图片信息---->></string>
+
+    <string name="str_intro">使用说明---->>\n选择一张图片来查看其Exif信息。
+    \nExif：资源交换档案格式（Exchangeable image file format，简称Exif），可以记录图片的属性信息。
+    \n比如：拍摄的设备品牌、设备型号、设备软件版本；地理位置信息（经纬度）；拍摄时间；拍摄参数（曝光时间、闪光灯、光圈、焦距、白平衡等）；图片宽高、方向等信息。
+    \n其中的一些信息是较隐私的，如位置信息、拍摄时间、设备信息等，您可以使用本软件擦除这些隐私信息。所以，选择一张图片试试看吧~</string>
+</resources>
